@@ -1,9 +1,12 @@
 ﻿  Physics.cpp
-C:\Users\Laptop\source\repos\VerletParticle\VerletParticle\Physics.h(231,22): warning C4267: 'return': conversion from 'size_t' to 'uint32_t', possible loss of data
+C:\Users\Laptop\Desktop\Project\Particle-Sim\VerletParticle\VerletParticle\Physics.h(145,18): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Laptop\Desktop\Project\Particle-Sim\VerletParticle\VerletParticle\Physics.h(231,22): warning C4267: 'return': conversion from 'size_t' to 'uint32_t', possible loss of data
   Renderer.cpp
-C:\Users\Laptop\source\repos\VerletParticle\VerletParticle\Physics.h(231,22): warning C4267: 'return': conversion from 'size_t' to 'uint32_t', possible loss of data
+C:\Users\Laptop\Desktop\Project\Particle-Sim\VerletParticle\VerletParticle\Physics.h(145,18): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Laptop\Desktop\Project\Particle-Sim\VerletParticle\VerletParticle\Physics.h(231,22): warning C4267: 'return': conversion from 'size_t' to 'uint32_t', possible loss of data
   main.cpp
-C:\Users\Laptop\source\repos\VerletParticle\VerletParticle\Physics.h(231,22): warning C4267: 'return': conversion from 'size_t' to 'uint32_t', possible loss of data
-C:\Users\Laptop\source\repos\VerletParticle\VerletParticle\main.cpp(55,85): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Laptop\Desktop\Project\Particle-Sim\VerletParticle\VerletParticle\Physics.h(145,18): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Laptop\Desktop\Project\Particle-Sim\VerletParticle\VerletParticle\Physics.h(231,22): warning C4267: 'return': conversion from 'size_t' to 'uint32_t', possible loss of data
+C:\Users\Laptop\Desktop\Project\Particle-Sim\VerletParticle\VerletParticle\main.cpp(55,85): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
   Generating Code...
-  VerletParticle.vcxproj -> C:\Users\Laptop\source\repos\VerletParticle\x64\Debug\VerletParticle.exe
+  VerletParticle.vcxproj -> C:\Users\Laptop\Desktop\Project\Particle-Sim\VerletParticle\x64\Debug\VerletParticle.exe

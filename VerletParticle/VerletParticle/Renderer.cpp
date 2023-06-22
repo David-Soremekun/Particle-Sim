@@ -8,7 +8,7 @@ void Renderer::render(const Physics& p) const
 	const sf::Vector3f constraint = p.getConstraint();
 	sf::CircleShape constraintBackground{ constraint.z };
 	constraintBackground.setOrigin(constraint.z, constraint.z);
-	constraintBackground.setFillColor(sf::Color::Black);
+	constraintBackground.setFillColor(sf::Color::White);
 	constraintBackground.setPosition(constraint.x, constraint.y);
 	constraintBackground.setPointCount(64);
 	m_target.draw(constraintBackground);

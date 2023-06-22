@@ -129,39 +129,39 @@ private:
 	void checkCollision(float dt) {
 		
 		const uint64_t particleCount = m_units.size();
-		//for (uint64_t i{ 0 }; i < particleCount;++i) 
-		//{
-		//	Particle& p1=m_units[i];
-		//	for (uint64_t j{ i + 1 }; j < particleCount; ++j) {
-		//		Particle& p2 =m_units[j];
+		for (uint64_t i{ 0 }; i < particleCount;++i) 
+		{
+			Particle& p1=m_units[i];
+			for (uint64_t j{ i + 1 }; j < particleCount; ++j) {
+				Particle& p2 =m_units[j];
 
-		//		float dx = p1.position.x - p2.position.x;
-		//		float dy = p1.position.y - p2.position.y;
-		//		float dist = hypot(dx, dy);
-		//		if (dist<=(p1.radius+p2.radius)) {
-		//			//std::cout << "Collision Occured\n";
-		//			float tangent = atan2(dx, dy);
+				float dx = p1.position.x - p2.position.x;
+				float dy = p1.position.y - p2.position.y;
+				float dist = hypot(dx, dy);
+				if (dist<=(p1.radius+p2.radius)) {
+					//std::cout << "Collision Occured\n";
+					float tangent = atan2(dx, dy);
 
-		//			float angle = 0.5 * (PI + tangent);
-		//			
-		//			const float angle1 = 2 * tangent - p1.m_angle;
-		//			const float angle2 = 2 * tangent - p2.m_angle;
+					float angle = 0.5 * (PI + tangent);
+					
+					const float angle1 = 2 * tangent - p1.m_angle;
+					const float angle2 = 2 * tangent - p2.m_angle;
 
 
-		//			const float speed1 = Magnitude(p1.getVelocity(dt)) * BOUNCINESS;
-		//			const float speed2 = Magnitude(p2.getVelocity(dt)) * BOUNCINESS;
+					const float speed1 = Magnitude(p1.getVelocity(dt)) * BOUNCINESS;
+					const float speed2 = Magnitude(p2.getVelocity(dt)) * BOUNCINESS;
 
-		//			(p1.m_angle, p1.speed) = (angle1, speed1);
-		//			(p2.m_angle, p2.speed) = (angle2, speed2);
+					(p1.m_angle, p1.speed) = (angle1, speed1);
+					(p2.m_angle, p2.speed) = (angle2, speed2);
 
-		//			p1.position.x += sin(angle);
-		//			p1.position.y -= cos(angle);
-		//			p2.position.x -= sin(angle);
-		//			p2.position.y += cos(angle);
+					p1.position.x += sin(angle);
+					p1.position.y -= cos(angle);
+					p2.position.x -= sin(angle);
+					p2.position.y += cos(angle);
 
-		//		}
-		//	}
-		//}
+				}
+			}
+		}
 
 		
 			

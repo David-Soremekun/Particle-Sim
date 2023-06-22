@@ -29,7 +29,7 @@ int main()
     physicsSolver.setSimUpdateRate(frameRate);
 
     const float spawnDelay = 0.50f;
-    const float spawnSpeed = 20.0f;
+    const float spawnSpeed = 200.0f;
     const sf::Vector2f spawnPosition = { 500.0f,200.0f };
     const int minRad = 5;
     const int maxRad = 15;
