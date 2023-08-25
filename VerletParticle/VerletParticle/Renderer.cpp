@@ -23,6 +23,8 @@ void Renderer::render(const Physics& p) const
 		circle.setPosition(p.position);
 		circle.setScale(p.radius, p.radius);
 		circle.setFillColor(p.colour);
+		circle.setOutlineColor(sf::Color::Black);
+		circle.setOutlineThickness(1.0f);
 		m_target.draw(circle);
 	}
 }

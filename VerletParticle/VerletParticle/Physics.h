@@ -10,7 +10,7 @@ struct Particle {
 	
 	float radius = 10.0f;
 	float m_angle = 0.0f;
-	float speed;
+	float speed = 0.0f;
 	sf::Vector2f position;
 	sf::Vector2f prev_position;
 	sf::Vector2f acceleration;
@@ -29,7 +29,7 @@ struct Particle {
 		const sf::Vector2f displacement = position - prev_position;
 
 		prev_position = position;
-		position = position + displacement + acceleration * (dt * dt);
+		position = position + displacement + acceleration /*(dt * dt)*/;
 
 		acceleration = { 0.0f,0.0f };
 	}
@@ -50,7 +50,7 @@ struct Particle {
 
 	void addVelocity(sf::Vector2f v, float dt)
 	{
-		prev_position -= v * dt;
+		prev_position = v * dt;
 	}
 	void Accelerate(sf::Vector2f a) {
 		acceleration += a;
@@ -83,6 +83,7 @@ private:
 			particles.Accelerate(m_wind);
 		}
 	}
+
 	void applyDrag() {
 		for (auto& particles : m_units)
 		{
@@ -193,10 +194,10 @@ public:
 		const float step_dt = getStepDt();
 		for (uint32_t i{p_sim_steps}; i--;)
 		{
-			applyGravity();
+			//applyGravity();
 			//applyDrag();
 			checkCollision(step_dt);
-			applyWind();
+			//applyWind();
 			applyConstraint();
 			updateParticles(step_dt);
 		}
