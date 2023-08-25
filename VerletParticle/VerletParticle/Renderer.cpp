@@ -24,7 +24,7 @@ void Renderer::render(const Physics& p) const
 		circle.setScale(p.radius, p.radius);
 		circle.setFillColor(p.colour);
 		circle.setOutlineColor(sf::Color::Black);
-		circle.setOutlineThickness(1.0f);
+		circle.setOutlineThickness(0.25f);
 		m_target.draw(circle);
 	}
 }
